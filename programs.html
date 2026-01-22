@@ -79,6 +79,8 @@
                     </div>
                     <h2 class="text-xl font-bold tracking-tight"><a href="index.html">Emergym</a></h2>
                 </div>
+
+                <!-- Desktop Nav -->
                 <nav class="hidden md:flex flex-1 justify-center gap-8">
                     <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Home</a>
                     <a class="text-sm font-medium text-primary" href="programs.html">Programs</a>
@@ -86,15 +88,41 @@
                         href="membership.html">Membership</a>
                     <a class="text-sm font-medium hover:text-primary transition-colors" href="about.html">About Us</a>
                 </nav>
+
                 <div class="flex items-center gap-4">
                     <button onclick="window.location.href='membership.html'"
                         class="hidden sm:flex min-w-[100px] items-center justify-center rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold transition-transform hover:scale-105">
                         Join Now
                     </button>
-                    <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ring-2 ring-primary/30"
-                        data-alt="User profile avatar"
-                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDrHxHcxKxU-F0bi-kzBg89uKiLj1m8nkN-TFgsBYWDiPveyqC7cDk0eeOgCMBmNn3oUO4PI0RVtlfM_Fcvbano77SXnalu_v4cll86EJsW86FC7pyb0UOHCfkJO4dRqXbVMEfT0bAHKVnH2ClR5aPkO3NhjIoVa_PnstyAdjRiYYEE0Kz6Z-pK6vCHk-lA4UQjBkxMF6AOoXxqyIL0fkicwbFRDVnqvXnknj1dvkladiN14McWgUlr2xXG3dXuvxm4QjQod87PUj0");'>
-                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden text-slate-900 dark:text-white focus:outline-none">
+                        <span class="material-symbols-outlined text-3xl">menu</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Overlay -->
+                <div id="mobile-menu"
+                    class="fixed inset-0 z-[60] bg-black transform translate-x-full transition-transform duration-300 flex flex-col items-center justify-center gap-8">
+                    <button id="close-menu-btn"
+                        class="absolute top-6 right-6 text-primary hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-4xl">close</span>
+                    </button>
+
+                    <a href="index.html"
+                        class="text-3xl font-black italic uppercase tracking-tighter text-white hover:text-primary transition-colors">Home</a>
+                    <a href="programs.html"
+                        class="text-3xl font-black italic uppercase tracking-tighter text-primary">Programs</a>
+                    <a href="membership.html"
+                        class="text-3xl font-black italic uppercase tracking-tighter text-white hover:text-primary transition-colors">Membership</a>
+                    <a href="about.html"
+                        class="text-3xl font-black italic uppercase tracking-tighter text-white hover:text-primary transition-colors">About
+                        Us</a>
+
+                    <button onclick="window.location.href='membership.html'"
+                        class="mt-8 px-10 py-4 bg-primary text-background-dark font-black uppercase tracking-widest rounded-lg hover:scale-105 transition-transform">
+                        Join Now
+                    </button>
                 </div>
             </div>
         </header>
@@ -365,6 +393,19 @@
             </div>
         </footer>
     </div>
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('translate-x-full');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+    </script>
 </body>
 
 </html>

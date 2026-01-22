@@ -60,6 +60,8 @@
                 <span class="material-symbols-outlined text-primary text-3xl">fitness_center</span>
                 <h2 class="text-2xl font-black tracking-tighter italic">EMERGYM</h2>
             </div>
+
+            <!-- Desktop Nav -->
             <nav class="hidden md:flex items-center gap-10">
                 <a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
                     href="index.html">Home</a>
@@ -69,16 +71,39 @@
                     href="membership.html">Membership</a>
                 <a class="text-sm font-bold uppercase tracking-widest text-primary" href="about.html">About Us</a>
             </nav>
+
             <div class="flex items-center gap-6">
                 <button onclick="window.location.href='membership.html'"
                     class="hidden sm:block px-6 py-2 bg-primary text-background-dark font-black uppercase text-sm rounded-lg hover:shadow-[0_0_20px_rgba(13,242,13,0.5)] transition-all">
                     Join Now
                 </button>
-                <div class="w-10 h-10 rounded-full border border-primary/30 bg-cover bg-center"
-                    data-alt="User profile placeholder"
-                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCXGSHHC44tApiK-XX8fF53OAlTjGJlz1mrearcKmK_K2PQpOJjzl5o0vUujBYv9yH2cpT5pToYnyARP1a5-8lcJIHwwH0qnppWwDSZS3hCbJi7kJIyQ2ckPzFpwI8UIsVEIMW81MV8cc2LS_vf8NXfr_kp9UsXGOjL3kBqf7NaplRoKCZPdcDxMll1vc6Sx8ZDWTJzd75VVAm0wFyVRpRJk1mhC3rG-PYS_i1SwYOFZ5VurngySyiMGPfBC86JLpXveR57x1QzPO4");'>
-                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
             </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="fixed inset-0 z-[60] bg-black transform translate-x-full transition-transform duration-300 flex flex-col items-center justify-center gap-8">
+            <button id="close-menu-btn" class="absolute top-6 right-6 text-primary hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-4xl">close</span>
+            </button>
+
+            <a href="index.html"
+                class="text-3xl font-black italic uppercase tracking-tighter text-white hover:text-primary transition-colors">Home</a>
+            <a href="programs.html"
+                class="text-3xl font-black italic uppercase tracking-tighter text-white hover:text-primary transition-colors">Programs</a>
+            <a href="membership.html"
+                class="text-3xl font-black italic uppercase tracking-tighter text-white hover:text-primary transition-colors">Membership</a>
+            <a href="about.html" class="text-3xl font-black italic uppercase tracking-tighter text-primary">About Us</a>
+
+            <button onclick="window.location.href='membership.html'"
+                class="mt-8 px-10 py-4 bg-primary text-background-dark font-black uppercase tracking-widest rounded-lg hover:scale-105 transition-transform">
+                Join Now
+            </button>
         </div>
     </header>
     <!-- Hero Section -->
@@ -175,6 +200,19 @@
                 Performance.</p>
         </div>
     </footer>
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('translate-x-full');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+    </script>
 </body>
 
 </html>
