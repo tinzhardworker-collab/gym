@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Emergym | Programs &amp; Facilities</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;family=Noto+Sans:wght@100..900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0df20d",
+                        "background-light": "#f5f8f5",
+                        "background-dark": "#102210",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-auto-rows: 200px;
+            gap: 1rem;
+        }
+
+        .masonry-tall {
+            grid-row: span 2;
+        }
+
+        .masonry-wide {
+            grid-column: span 2;
+        }
+
+        .program-card:hover .program-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white transition-colors duration-300">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Top Navigation Bar -->
+        <header
+            class="sticky top-0 z-50 w-full border-b border-white/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 md:px-10 lg:px-40 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <div class="size-8 text-primary">
+                        <svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-xl font-bold tracking-tight"><a href="index.html">Emergym</a></h2>
+                </div>
+                <nav class="hidden md:flex flex-1 justify-center gap-8">
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Home</a>
+                    <a class="text-sm font-medium text-primary" href="programs.html">Programs</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors"
+                        href="membership.html">Membership</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="about.html">About Us</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button onclick="window.location.href='membership.html'"
+                        class="hidden sm:flex min-w-[100px] items-center justify-center rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold transition-transform hover:scale-105">
+                        Join Now
+                    </button>
+                    <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ring-2 ring-primary/30"
+                        data-alt="User profile avatar"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDrHxHcxKxU-F0bi-kzBg89uKiLj1m8nkN-TFgsBYWDiPveyqC7cDk0eeOgCMBmNn3oUO4PI0RVtlfM_Fcvbano77SXnalu_v4cll86EJsW86FC7pyb0UOHCfkJO4dRqXbVMEfT0bAHKVnH2ClR5aPkO3NhjIoVa_PnstyAdjRiYYEE0Kz6Z-pK6vCHk-lA4UQjBkxMF6AOoXxqyIL0fkicwbFRDVnqvXnknj1dvkladiN14McWgUlr2xXG3dXuvxm4QjQod87PUj0");'>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1 flex flex-col">
+            <!-- Section Header: Programs -->
+            <section class="px-6 md:px-10 lg:px-40 pt-16 pb-8">
+                <div class="max-w-[960px] mx-auto">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="h-[2px] w-12 bg-primary"></span>
+                        <span class="text-primary font-bold tracking-widest text-xs uppercase">Elite Performance</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-black leading-tight tracking-tight">Our Elite Training Programs
+                    </h2>
+                    <p class="mt-4 text-slate-500 dark:text-slate-400 max-w-2xl">Push your limits with world-class
+                        coaching in Karachi’s most advanced fitness environment.</p>
+                </div>
+            </section>
+            <!-- Programs Grid -->
+            <section class="px-6 md:px-10 lg:px-40 pb-20">
+                <div class="max-w-[960px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- CrossFit Card -->
+                    <div class="group program-card relative overflow-hidden rounded-xl aspect-[3/4] cursor-pointer">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            data-alt="Athlete doing high intensity crossfit training"
+                            style='background-image: linear-gradient(0deg, rgba(16, 34, 16, 0.9) 0%, rgba(0, 0, 0, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAL5BATluEL6RYpyUxYGGBZ7j1Rxpfvt1rh9-T3f_O5IycJ553MpE0b3g8CqIEPLfUSjaxeiKYQYo7bNGYDVIQHLHJkpXMO39HaEX2HTeLuLOpF2GOcw3sUSfEz2LOT_B5SUXCaLi4dvFaNNwXf43Yf-xetriyXotPfmj_gyMSJTohey8azrR1l96PnsLdcsVgA8NytuWz6QDIe7LQ9DIRd3sNrEDrTaJO_yxXx8nsqkT98cTmm9lgU6gcoEPy9pa2vf_B7nkmymtk");'>
+                        </div>
+                        <div class="absolute inset-0 flex flex-col justify-end p-6">
+                            <h3 class="text-2xl font-bold text-white group-hover:text-primary transition-colors">
+                                CrossFit</h3>
+                            <p class="text-slate-300 text-sm mt-2 opacity-100 group-hover:opacity-0 transition-opacity">
+                                High-intensity functional training.</p>
+                            <!-- Hover Detail Overlay -->
+                            <div
+                                class="program-overlay absolute inset-0 bg-background-dark/90 flex flex-col justify-center p-8 opacity-0 translate-y-4 transition-all duration-300">
+                                <span class="text-primary text-xs font-bold uppercase tracking-widest mb-2">Intensity:
+                                    Extreme</span>
+                                <h4 class="text-xl font-bold mb-4 text-white">CrossFit Elite</h4>
+                                <ul class="text-slate-300 text-sm space-y-2 mb-6">
+                                    <li class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                        60 min sessions</li>
+                                    <li class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                        Olympic lifting focus</li>
+                                    <li class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                        Professional WODs</li>
+                                </ul>
+                                <button onclick="window.location.href='membership.html'"
+                                    class="w-full py-3 bg-primary text-background-dark font-bold rounded-lg text-sm uppercase tracking-wider">Join
+                                    Class</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bodybuilding Card -->
+                    <div class="group program-card relative overflow-hidden rounded-xl aspect-[3/4] cursor-pointer">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            data-alt="Bodybuilder lifting heavy weights in dark gym"
+                            style='background-image: linear-gradient(0deg, rgba(16, 34, 16, 0.9) 0%, rgba(0, 0, 0, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAw7DjEiFFG-5BAHP09H78XyLQmy3BdqgwYMdpjlTtaACRi4mFkZePy64NdeTS3L7zXMJU6yq4vxwfgUDE2-5ff90PSn2zxUbhB6TCaK1OCWi101lmlfrLzqOvvI8SSRcJg8FRPWNW4qlw0bIqeZyKku2A6nPg971aS1vzr40VJii6IQnlj-nMOzcAYu44RUBaRQNE7pCxHnxew2xawMEHl6ivTRTiMPlmx0PMPmzQZu9vAoukM3GpihgIs_QQP_iTA0Rv2bzZSu-A");'>
+                        </div>
+                        <div class="absolute inset-0 flex flex-col justify-end p-6">
+                            <h3 class="text-2xl font-bold text-white group-hover:text-primary transition-colors">
+                                Bodybuilding</h3>
+                            <p class="text-slate-300 text-sm mt-2 opacity-100 group-hover:opacity-0 transition-opacity">
+                                Hypertrophy and strength focus.</p>
+                            <!-- Hover Detail Overlay -->
+                            <div
+                                class="program-overlay absolute inset-0 bg-background-dark/90 flex flex-col justify-center p-8 opacity-0 translate-y-4 transition-all duration-300">
+                                <span class="text-primary text-xs font-bold uppercase tracking-widest mb-2">Intensity:
+                                    High</span>
+                                <h4 class="text-xl font-bold mb-4 text-white">Sculpt &amp; Build</h4>
+                                <ul class="text-slate-300 text-sm space-y-2 mb-6">
+                                    <li class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                        Personal guidance</li>
+                                    <li class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                        Advanced machinery</li>
+                                    <li class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                        Nutrition planning</li>
+                                </ul>
+                                <button onclick="window.location.href='membership.html'"
+                                    class="w-full py-3 bg-primary text-background-dark font-bold rounded-lg text-sm uppercase tracking-wider">Join
+                                    Class</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Yoga Card -->
+                    <div class="group program-card relative overflow-hidden rounded-xl aspect-[3/4] cursor-pointer">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            data-alt="Yoga practitioner in calm lighting"
+                            style='background-image: linear-gradient(0deg, rgba(16, 34, 16, 0.9) 0%, rgba(0, 0, 0, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAqGlmNcC9Z6Ug0S3r8OoOm0VNLGbeG6LQLFIKVv5g8gb0u5CbVXbjpj0vPkFTlrSizuQV_ASo7M2MAlve8qu4Ja8oXW99sKU0TRVvlmsVULLqYXQEPuEne5c4Xluw7-jFZ5XnnXArPA4xg1iy6ykms2Fjtp9wR4h4a7q4vMfFchwGTJmlB7ciuk8RP13wBTmQriUpF2hXeRFUDbMd7vxdls4ZaRnb3dQFMmC_DruPUULsoJG3KTLoIbcGKQuoVc-NW-xhLtytc-PQ");'>
+                        </div>
+                        <div class="absolute inset-0 flex flex-col justify-end p-6">
+                            <h3 class="text-2xl font-bold text-white group-hover:text-primary transition-colors">Yoga
+                            </h3>
+                            <p class="text-slate-300 text-sm mt-2 opacity-100 group-hover:opacity-0 transition-opacity">
+                                Flexibility and mental recovery.</p>
+                            <!-- Hover Detail Overlay -->
+                            <div
+                                class="program-overlay absolute inset-0 bg-background-dark/90 flex flex-col justify-center p-8 opacity-0 translate-y-4 transition-all duration-300">
+                                <span class="text-primary text-xs font-bold uppercase tracking-widest mb-2">Intensity:
+                                    Moderate</span>
+                                <h4 class="text-xl font-bold mb-4 text-white">Zen Mastery</h4>
+                                <ul class="text-slate-300 text-sm space-y-2 mb-6">
+                                    <li class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                        Vinyasa flow</li>
+                                    <li class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                        Mindfulness sessions</li>
+                                    <li class="flex items-center gap-2"><span
+                                            class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                        Sunset sessions</li>
+                                </ul>
+                                <button onclick="window.location.href='membership.html'"
+                                    class="w-full py-3 bg-primary text-background-dark font-bold rounded-lg text-sm uppercase tracking-wider">Join
+                                    Class</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- CTA Banner -->
+            <section class="w-full bg-primary py-12 px-6 md:px-10 lg:px-40">
+                <div class="max-w-[960px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div class="text-background-dark">
+                        <h3 class="text-2xl font-black uppercase italic tracking-tighter leading-none mb-2">Ready to
+                            transform?</h3>
+                        <p class="font-medium text-lg opacity-80">Karachi's finest luxury gym awaits you.</p>
+                    </div>
+                    <button onclick="window.location.href='membership.html'"
+                        class="px-10 py-4 bg-background-dark text-primary font-bold rounded-lg uppercase tracking-widest hover:bg-black transition-colors">
+                        Book a Free Session
+                    </button>
+                </div>
+            </section>
+            <!-- Section Header: Facilities -->
+            <section class="px-6 md:px-10 lg:px-40 pt-20 pb-8">
+                <div class="max-w-[960px] mx-auto text-center">
+                    <div class="flex items-center justify-center gap-3 mb-2">
+                        <span class="h-[2px] w-8 bg-primary"></span>
+                        <span class="text-primary font-bold tracking-widest text-xs uppercase">Premium Standards</span>
+                        <span class="h-[2px] w-8 bg-primary"></span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-black leading-tight tracking-tight mb-6">World-Class Facilities
+                    </h2>
+                </div>
+            </section>
+            <!-- Facilities Masonry Showcase -->
+            <section class="px-6 md:px-10 lg:px-40 pb-24">
+                <div class="max-w-[960px] mx-auto masonry-grid">
+                    <!-- Cardio Suite -->
+                    <div class="masonry-wide relative rounded-xl overflow-hidden group">
+                        <div class="absolute inset-0 bg-cover bg-center"
+                            data-alt="Modern cardio equipment with digital displays"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuARQI2ztbVEh2N73QBDquYCbLcCvHSMJ8ytHSsX1GIBPrhB1rwqmkWkTSGktr285lt4CnSxNkyzn9DSpN-dpJNJlFqS3JZfO98G9UGECvcTkEdRw71GMy9kxdwrJMZT9aTIVa-O2gbRYfoCICgOCv0uStJNkIiApD3xFtljYRUo8EIHz_TV6lcKYHJNleqk-LD3hqHWtLA4V5BY1zhw0HzUjjZ96mpwRmJUwStMIs6Jqu9bPR5B7mUPcOoFk5BGrdsPPir5xsNdK8Y");'>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                            <div>
+                                <h4 class="text-white font-bold text-lg">Cardio Suite</h4>
+                                <p class="text-slate-300 text-xs uppercase tracking-widest">Technogym Equipment</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Olympic Platforms -->
+                    <div class="masonry-tall relative rounded-xl overflow-hidden group">
+                        <div class="absolute inset-0 bg-cover bg-center"
+                            data-alt="Olympic lifting platforms with heavy weights"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDvg3jPiOIR5Eh1jvVOZ2pwNNo6idR6Wag8TSgwBCa_pgY3jFOTiwZeW0ESCbNgmqbXpaVgoHIGIcq3kWXbvyR0GWJxjGN4eXc3dxa9bdIX1i2sZTNoOWHXAQVbI80OwLxAT4lyn9hQ-XyUQRg2Spfx2hMVNXDaGBczYMLT3EtiT-u5l1FTSoWpzD9y4Ql_IoQV-OvFVVCp1IsvuzOabSDk_oUfzVls02xDyA3efHHqdd6dZzprL-BJJtZNYqRX6QLN2ZSVT6Iqt8E");'>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                            <div>
+                                <h4 class="text-white font-bold text-lg">Power Zone</h4>
+                                <p class="text-slate-300 text-xs uppercase tracking-widest">Eleiko Platforms</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Luxury Lockers -->
+                    <div class="relative rounded-xl overflow-hidden group">
+                        <div class="absolute inset-0 bg-cover bg-center" data-alt="Luxury spa style gym locker rooms"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnqklZ59zF5pWY7xJ_W91jcfw_F_pC5cH5ldXSbKTs6jt5pDCZQDbmX3tmw4fZ1TbwNu6V0G_PuYuYegaP65pNrJS1eM7PxAPi35YIGRTykzP2z31ZfgDhznEMv66V7CsbV3v8m1COy7zJU4zFnV3XOj8SYixGMFvWTbHbAjsU39FqMtd7445G1FRGPpT1WbI3JRCc0AusGCVAsOz73aWLi2Wu4rjZZFlIE5gfybKK476xP7rSqk3KeJrcHLmIE2fBVolYa_hs8lY");'>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                            <h4 class="text-white font-bold text-md">Luxury Lockers</h4>
+                        </div>
+                    </div>
+                    <!-- Protein Bar -->
+                    <div class="relative rounded-xl overflow-hidden group">
+                        <div class="absolute inset-0 bg-cover bg-center"
+                            data-alt="Modern protein bar and smoothie station"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDDKgl-HQEsJczSI5IgHJwHyHvr1mUWOAl1cryp3VQyFojrSSeY8kQWBaGZfjVCRbfm71Z0Wq6ibGNQrD_MUO3UUO8OE9_zNVlMXMuPhc3B_TbmFQY5MVUoOV5jLwOQRH89mNSitD2sGbu0cuEX0dDg4yEd9AfnGyceoN9B-legXu4XAzqw7tTgicoutPSF-BZnaNqsAc270x59bepqmI2d3CTsg85PbrD0FfNCAdO3xiXZXDYKQjFWzuyBKpbj2kBcEMrNDz60XE8");'>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                            <h4 class="text-white font-bold text-md">Fuel Bar</h4>
+                        </div>
+                    </div>
+                    <!-- Spa & Recovery -->
+                    <div class="masonry-wide relative rounded-xl overflow-hidden group">
+                        <div class="absolute inset-0 bg-cover bg-center"
+                            data-alt="High end infrared sauna and recovery area"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBRubzsSyJXLlMSrMAG1PbHUpjsjDTQvMkzTGHHzB7p9hR8Vb4RVdWL5t6zmVLRg2VIjfGwr1t7-zMBJhRso-IL7gsh5sLTHJ9fu7sIF8PU7-pc7yk4SqzOE4IJAlgAex25V1lpp8_VBCDpAs_LFaKMqNvNv8YBMN74MT2eZZCI56VAVJNh8s-9av2Q-CZsfaC4iukJPT6YgiDheIbPxKBd4IgkFtiAjr2F4p6fRKcCRGDBKgiSKCbjXYcBpnZ3ln2npHVJyKb6D68");'>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                            <div>
+                                <h4 class="text-white font-bold text-lg">Recovery Spa</h4>
+                                <p class="text-slate-300 text-xs uppercase tracking-widest">Infrared Saunas &amp; Cold
+                                    Plunge</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="bg-black/40 border-t border-white/5 py-12 px-6 md:px-10 lg:px-40">
+            <div class="max-w-[960px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="size-6 text-primary">
+                            <svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-xl font-bold">Emergym</h2>
+                    </div>
+                    <p class="text-slate-500 text-sm mb-6 max-w-xs">Karachi’s premier destination for high-performance
+                        fitness and luxury recovery. Elevate your potential.</p>
+                    <div class="flex gap-4">
+                        <a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-sm">public</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-primary transition-colors"
+                            href="#">
+                            <span class="material-symbols-outlined text-sm">share</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-4 text-white">Programs</h5>
+                    <ul class="space-y-2 text-slate-500 text-sm">
+                        <li><a class="hover:text-primary" href="#">CrossFit Elite</a></li>
+                        <li><a class="hover:text-primary" href="#">Power Lifting</a></li>
+                        <li><a class="hover:text-primary" href="#">Yoga Flow</a></li>
+                        <li><a class="hover:text-primary" href="#">HIIT Cardio</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-4 text-white">Contact</h5>
+                    <ul class="space-y-2 text-slate-500 text-sm">
+                        <li>DHA Phase 6, Karachi</li>
+                        <li>info@emergym.pk</li>
+                        <li>+92 21 3456 7890</li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="max-w-[960px] mx-auto mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-slate-600">© 2024 Emergym Karachi. All rights reserved.</p>
+                <div class="flex gap-6 text-xs text-slate-600">
+                    <a class="hover:text-slate-400" href="privacy.html">Privacy Policy</a>
+                    <a class="hover:text-slate-400" href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

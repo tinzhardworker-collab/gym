@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Us | Emergym</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;family=Noto+Sans:wght@100..900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0df20d",
+                        "background-light": "#f5f8f5",
+                        "background-dark": "#0a0a0a", // Deep charcoal/black
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+
+        .hero-video-overlay {
+            background: linear-gradient(to bottom, rgba(10, 10, 10, 0.6) 0%, rgba(10, 10, 10, 0.4) 50%, rgba(10, 10, 10, 1) 100%);
+        }
+
+        .nav-blur {
+            backdrop-filter: blur(12px);
+            background-color: rgba(10, 10, 10, 0.7);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-white font-display overflow-x-hidden">
+    <!-- Sticky Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-white/10">
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-20 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+                <span class="material-symbols-outlined text-primary text-3xl">fitness_center</span>
+                <h2 class="text-2xl font-black tracking-tighter italic">EMERGYM</h2>
+            </div>
+            <nav class="hidden md:flex items-center gap-10">
+                <a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                    href="index.html">Home</a>
+                <a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                    href="programs.html">Programs</a>
+                <a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                    href="membership.html">Membership</a>
+                <a class="text-sm font-bold uppercase tracking-widest text-primary" href="about.html">About Us</a>
+            </nav>
+            <div class="flex items-center gap-6">
+                <button onclick="window.location.href='membership.html'"
+                    class="hidden sm:block px-6 py-2 bg-primary text-background-dark font-black uppercase text-sm rounded-lg hover:shadow-[0_0_20px_rgba(13,242,13,0.5)] transition-all">
+                    Join Now
+                </button>
+                <div class="w-10 h-10 rounded-full border border-primary/30 bg-cover bg-center"
+                    data-alt="User profile placeholder"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCXGSHHC44tApiK-XX8fF53OAlTjGJlz1mrearcKmK_K2PQpOJjzl5o0vUujBYv9yH2cpT5pToYnyARP1a5-8lcJIHwwH0qnppWwDSZS3hCbJi7kJIyQ2ckPzFpwI8UIsVEIMW81MV8cc2LS_vf8NXfr_kp9UsXGOjL3kBqf7NaplRoKCZPdcDxMll1vc6Sx8ZDWTJzd75VVAm0wFyVRpRJk1mhC3rG-PYS_i1SwYOFZ5VurngySyiMGPfBC86JLpXveR57x1QzPO4");'>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] w-full flex items-center justify-center overflow-hidden">
+        <!-- Background Video/Image Container -->
+        <div class="absolute inset-0 z-0">
+            <div class="w-full h-full bg-cover bg-center" data-alt="Gym interior empty"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBmn_gqJBSq1FDKkQ5-Rjg9uRUjk24-34uXQO0wPwbU2S0yq4y2U1l_R4Dse4aY-lHq_rKkZlF5vX4pM_jQ2Zt8nS6b3G7kC1W9yL5oH0m0N9v8X7qJ2L4tD6z3F1sY5wE8A9b0C2d4e6f8G1h3I5j7K9l0m2N4o6P8Q1r3S5t7U9v1W3x5Y7z9A1b3C5d7E9f1G");'>
+            </div>
+            <div class="absolute inset-0 hero-video-overlay"></div>
+        </div>
+        <!-- Hero Content -->
+        <div class="relative z-10 container mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-7xl font-black mb-6 tracking-tighter leading-none italic uppercase">
+                Our <span class="text-primary">Mission</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-gray-300 text-lg md:text-xl font-light">
+                To empower the people of Karachi to reach their peak physical potential through world-class facilities
+                and expert guidance.
+            </p>
+        </div>
+    </section>
+    <!-- About Content -->
+    <section class="py-24 bg-background-dark relative">
+        <div class="max-w-[1000px] mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl font-black uppercase italic mb-6">Built for <span
+                            class="text-primary">Greatness</span></h2>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Emergym started with a simple idea: Karachi deserves a fitness facility that rivals the best in
+                        the world. We stripped away the unnecessary and focused on what matters—biomechanically precise
+                        equipment, an motivating atmosphere, and a community of dedicated individuals.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed">
+                        Whether you are a professional athlete or just starting your journey, our space is designed to
+                        help you focus, push harder, and achieve more.
+                    </p>
+                </div>
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-primary/20 rounded-xl blur-lg"></div>
+                    <div class="relative rounded-xl overflow-hidden border border-white/10">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqc8rTusyjbqL5jeAYihRuRrm8tUvLNPfFtCyTxkcJFDwnPzDiVyWyEf5aIhEM3ZrCkw-8AwGv1onZrx-iynTUqtqgWLAaM5Eo8da5qPm8D1fBR_nfPC1DwcP7dX8NgsZ2Xad8DKbKhK_s-zjpKA6EPpcOiCFWxqrCxe9Is_EvQobGSmXpwQpFxqcS2sC6A2buVhQCkMpBV6wIEGSaQa5wbuuMpcQ0RmEzhAYG31R6_P-E3fTRnJxeQ0fMLTUESpp4xtIV1sjy4Gg"
+                            alt="Gym weights" class="w-full h-auto object-cover" />
+                    </div>
+                </div>
+            </div>
+            <div class="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 border border-white/5 rounded-xl bg-[#121212]">
+                    <h3 class="text-4xl font-black text-primary mb-2">50+</h3>
+                    <p class="text-sm font-bold uppercase tracking-widest text-gray-500">Premium Machines</p>
+                </div>
+                <div class="p-6 border border-white/5 rounded-xl bg-[#121212]">
+                    <h3 class="text-4xl font-black text-primary mb-2">12</h3>
+                    <p class="text-sm font-bold uppercase tracking-widest text-gray-500">Expert Trainers</p>
+                </div>
+                <div class="p-6 border border-white/5 rounded-xl bg-[#121212]">
+                    <h3 class="text-4xl font-black text-primary mb-2">100%</h3>
+                    <p class="text-sm font-bold uppercase tracking-widest text-gray-500">Dedication</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/5 py-12">
+        <div class="max-w-[1200px] mx-auto px-6 flex flex-col items-center gap-10">
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-2xl">fitness_center</span>
+                <h2 class="text-xl font-black italic">EMERGYM</h2>
+            </div>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16">
+                <a class="text-gray-500 hover:text-primary text-sm uppercase font-bold tracking-widest transition-colors"
+                    href="privacy.html">Privacy Policy</a>
+                <a class="text-gray-500 hover:text-primary text-sm uppercase font-bold tracking-widest transition-colors"
+                    href="terms.html">Terms of Service</a>
+                <a class="text-gray-500 hover:text-primary text-sm uppercase font-bold tracking-widest transition-colors"
+                    href="membership.html#contact">Contact Us</a>
+            </div>
+            <div class="flex items-center gap-6">
+                <a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-500 hover:text-primary hover:border-primary transition-all"
+                    href="#">
+                    <span class="material-symbols-outlined">camera</span>
+                </a>
+                <a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-500 hover:text-primary hover:border-primary transition-all"
+                    href="#">
+                    <span class="material-symbols-outlined">social_leaderboard</span>
+                </a>
+                <a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-500 hover:text-primary hover:border-primary transition-all"
+                    href="#">
+                    <span class="material-symbols-outlined">play_circle</span>
+                </a>
+            </div>
+            <p class="text-gray-600 text-xs uppercase tracking-widest font-medium">© 2024 Emergym Karachi. Built for
+                Performance.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

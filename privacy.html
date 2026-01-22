@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Privacy Policy | Emergym</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;family=Noto+Sans:wght@100..900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0df20d",
+                        "background-light": "#f5f8f5",
+                        "background-dark": "#0a0a0a",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+
+        .nav-blur {
+            backdrop-filter: blur(12px);
+            background-color: rgba(10, 10, 10, 0.7);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-white font-display overflow-x-hidden">
+    <!-- Sticky Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-white/10">
+        <div class="max-w-[1440px] mx-auto px-6 lg:px-20 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+                <span class="material-symbols-outlined text-primary text-3xl">fitness_center</span>
+                <h2 class="text-2xl font-black tracking-tighter italic">EMERGYM</h2>
+            </div>
+            <nav class="hidden md:flex items-center gap-10">
+                <a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                    href="index.html">Home</a>
+                <a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                    href="programs.html">Programs</a>
+                <a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                    href="membership.html">Membership</a>
+                <a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
+                    href="about.html">About Us</a>
+            </nav>
+            <div class="flex items-center gap-6">
+                <button onclick="window.location.href='membership.html'"
+                    class="hidden sm:block px-6 py-2 bg-primary text-background-dark font-black uppercase text-sm rounded-lg hover:shadow-[0_0_20px_rgba(13,242,13,0.5)] transition-all">Join
+                    Now</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-black uppercase italic mb-10 text-primary">Privacy Policy</h1>
+            <div class="space-y-8 text-gray-400 leading-relaxed">
+                <p>At Emergym, we take your privacy seriously. This Privacy Policy explains how we collect, use, and
+                    protect your personal information.</p>
+
+                <h2 class="text-2xl font-bold text-white uppercase">1. Information We Collect</h2>
+                <p>We collect information you provide directly to us, such as when you sign up for a membership, book a
+                    class, or contact us. This may include your name, email address, phone number, and payment
+                    information.</p>
+
+                <h2 class="text-2xl font-bold text-white uppercase">2. How We Use Your Information</h2>
+                <p>We use your information to provide our services, process payments, communicate with you about your
+                    account, and send you updates about our gym and programs.</p>
+
+                <h2 class="text-2xl font-bold text-white uppercase">3. Information Sharing</h2>
+                <p>We do not share your personal information with third parties, except as necessary to provide our
+                    services (e.g., payment processing) or as required by law.</p>
+
+                <h2 class="text-2xl font-bold text-white uppercase">4. Security</h2>
+                <p>We implement appropriate security measures to protect your personal information from unauthorized
+                    access, alteration, or disclosure.</p>
+
+                <h2 class="text-2xl font-bold text-white uppercase">5. Contact Us</h2>
+                <p>If you have any questions about this Privacy Policy, please contact us at info@emergym.pk.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/5 py-12">
+        <div class="max-w-[1200px] mx-auto px-6 flex flex-col items-center gap-10">
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-2xl">fitness_center</span>
+                <h2 class="text-xl font-black italic">EMERGYM</h2>
+            </div>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16">
+                <a class="text-gray-500 hover:text-primary text-sm uppercase font-bold tracking-widest transition-colors"
+                    href="privacy.html">Privacy Policy</a>
+                <a class="text-gray-500 hover:text-primary text-sm uppercase font-bold tracking-widest transition-colors"
+                    href="terms.html">Terms of Service</a>
+                <a class="text-gray-500 hover:text-primary text-sm uppercase font-bold tracking-widest transition-colors"
+                    href="membership.html#contact">Contact Us</a>
+            </div>
+            <p class="text-gray-600 text-xs uppercase tracking-widest font-medium">© 2024 Emergym Karachi. Built for
+                Performance.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

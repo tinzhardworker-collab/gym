@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Emergym Membership &amp; Contact</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;family=Noto+Sans:wght@100..900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0df20d",
+                        "accent-orange": "#ff5f00",
+                        "background-light": "#f5f8f5",
+                        "background-dark": "#102210",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .neon-orange-glow {
+            box-shadow: 0 0 20px rgba(255, 95, 0, 0.4);
+            border: 1px solid #ff5f00;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #102210;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #224922;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white transition-colors duration-300">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Navigation -->
+            <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-b-[#224922] px-6 lg:px-40 py-4 bg-background-light dark:bg-background-dark sticky top-0 z-50">
+                <div class="flex items-center gap-3 text-slate-900 dark:text-white">
+                    <div class="size-6 text-primary">
+                        <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h2 class="text-lg font-bold leading-tight tracking-tight uppercase"><a
+                            href="index.html">Emergym</a></h2>
+                </div>
+                <div class="hidden md:flex flex-1 justify-end gap-10 items-center">
+                    <nav class="flex items-center gap-8">
+                        <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Home</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors"
+                            href="programs.html">Programs</a>
+                        <a class="text-sm font-medium text-primary" href="membership.html">Membership</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors" href="about.html">About
+                            Us</a>
+                    </nav>
+                    <button onclick="window.location.href='membership.html'"
+                        class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-background-dark text-sm font-bold transition-transform active:scale-95">
+                        Join Now
+                    </button>
+                </div>
+            </header>
+            <main class="flex-1">
+                <!-- Membership Section -->
+                <section class="px-6 lg:px-40 py-16 flex flex-col items-center" id="membership">
+                    <div class="max-w-[1200px] w-full">
+                        <div class="mb-10 text-center">
+                            <h2
+                                class="text-slate-900 dark:text-white text-3xl md:text-4xl font-black leading-tight tracking-tight uppercase mb-2">
+                                Elevate Your Performance</h2>
+                            <p class="text-slate-600 dark:text-slate-400 text-base max-w-lg mx-auto">Select a plan that
+                                fits your fitness journey in Karachi. No hidden fees, just pure gains.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Essential -->
+                            <div
+                                class="flex flex-col gap-6 rounded-xl border border-solid border-slate-200 dark:border-[#316831] bg-white dark:bg-[#183418] p-8 hover:translate-y-[-4px] transition-all">
+                                <div class="flex flex-col gap-1 border-b border-slate-100 dark:border-[#224922] pb-4">
+                                    <h3 class="text-slate-900 dark:text-white text-xl font-bold uppercase">Essential
+                                    </h3>
+                                    <div class="flex items-baseline gap-1 mt-2">
+                                        <span
+                                            class="text-slate-900 dark:text-white text-3xl font-black tracking-tight">PKR
+                                            5,000</span>
+                                        <span
+                                            class="text-slate-500 dark:text-slate-400 text-sm font-medium">/month</span>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-4 flex-1">
+                                    <div class="text-[14px] font-normal leading-normal flex gap-3 items-center">
+                                        <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                        Basic gym access
+                                    </div>
+                                    <div class="text-[14px] font-normal leading-normal flex gap-3 items-center">
+                                        <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                        Standard operating hours
+                                    </div>
+                                    <div class="text-[14px] font-normal leading-normal flex gap-3 items-center">
+                                        <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                        Locker access
+                                    </div>
+                                    <div
+                                        class="text-[14px] font-normal leading-normal flex gap-3 items-center text-slate-400">
+                                        <span class="material-symbols-outlined text-slate-600 text-lg">cancel</span>
+                                        <span class="line-through">Guest passes</span>
+                                    </div>
+                                </div>
+                                <button
+                                    class="w-full cursor-pointer rounded-lg h-12 px-4 bg-slate-100 dark:bg-[#224922] text-slate-900 dark:text-white text-sm font-bold hover:bg-primary hover:text-background-dark transition-colors">
+                                    Get Started
+                                </button>
+                            </div>
+                            <!-- Pro -->
+                            <div
+                                class="flex flex-col gap-6 rounded-xl border border-solid border-slate-200 dark:border-[#316831] bg-white dark:bg-[#183418] p-8 hover:translate-y-[-4px] transition-all relative">
+                                <div class="flex flex-col gap-1 border-b border-slate-100 dark:border-[#224922] pb-4">
+                                    <h3 class="text-slate-900 dark:text-white text-xl font-bold uppercase">Pro</h3>
+                                    <div class="flex items-baseline gap-1 mt-2">
+                                        <span
+                                            class="text-slate-900 dark:text-white text-3xl font-black tracking-tight">PKR
+                                            8,500</span>
+                                        <span
+                                            class="text-slate-500 dark:text-slate-400 text-sm font-medium">/month</span>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-4 flex-1">
+                                    <div class="text-[14px] font-normal leading-normal flex gap-3 items-center">
+                                        <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                        Full 24/7 access
+                                    </div>
+                                    <div class="text-[14px] font-normal leading-normal flex gap-3 items-center">
+                                        <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                        1 Guest pass per month
+                                    </div>
+                                    <div class="text-[14px] font-normal leading-normal flex gap-3 items-center">
+                                        <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                        Shower facilities
+                                    </div>
+                                    <div class="text-[14px] font-normal leading-normal flex gap-3 items-center">
+                                        <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                        Premium locker service
+                                    </div>
+                                </div>
+                                <button
+                                    class="w-full cursor-pointer rounded-lg h-12 px-4 bg-slate-100 dark:bg-[#224922] text-slate-900 dark:text-white text-sm font-bold hover:bg-primary hover:text-background-dark transition-colors">
+                                    Go Pro
+                                </button>
+                            </div>
+                            <!-- Elite (Highlighted) -->
+                            <div
+                                class="flex flex-col gap-6 rounded-xl bg-white dark:bg-[#1e1e1e] p-8 hover:translate-y-[-4px] transition-all relative neon-orange-glow">
+                                <div
+                                    class="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent-orange text-white text-[10px] font-black uppercase tracking-widest px-4 py-1 rounded-full shadow-lg shadow-accent-orange/20">
+                                    Most Popular
+                                </div>
+                                <div class="flex flex-col gap-1 border-b border-slate-100 dark:border-slate-800 pb-4">
+                                    <h3 class="text-slate-900 dark:text-white text-xl font-bold uppercase">Elite</h3>
+                                    <div class="flex items-baseline gap-1 mt-2">
+                                        <span
+                                            class="text-slate-900 dark:text-white text-3xl font-black tracking-tight">PKR
+                                            12,000</span>
+                                        <span
+                                            class="text-slate-500 dark:text-slate-400 text-sm font-medium">/month</span>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-4 flex-1">
+                                    <div class="text-[14px] font-normal leading-normal flex gap-3 items-center">
+                                        <span
+                                            class="material-symbols-outlined text-accent-orange text-lg">verified</span>
+                                        4 Personal Trainer sessions
+                                    </div>
+                                    <div class="text-[14px] font-normal leading-normal flex gap-3 items-center">
+                                        <span
+                                            class="material-symbols-outlined text-accent-orange text-lg">verified</span>
+                                        Unlimited Sauna access
+                                    </div>
+                                    <div class="text-[14px] font-normal leading-normal flex gap-3 items-center">
+                                        <span
+                                            class="material-symbols-outlined text-accent-orange text-lg">verified</span>
+                                        25% Supplement discount
+                                    </div>
+                                    <div class="text-[14px] font-normal leading-normal flex gap-3 items-center">
+                                        <span
+                                            class="material-symbols-outlined text-accent-orange text-lg">verified</span>
+                                        Priority booking for classes
+                                    </div>
+                                    <div class="text-[14px] font-normal leading-normal flex gap-3 items-center">
+                                        <span
+                                            class="material-symbols-outlined text-accent-orange text-lg">verified</span>
+                                        Unlimited Guest passes
+                                    </div>
+                                </div>
+                                <button
+                                    class="w-full cursor-pointer rounded-lg h-12 px-4 bg-accent-orange text-white text-sm font-bold hover:bg-white hover:text-accent-orange transition-all duration-300">
+                                    Join Elite
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Contact & Map Section -->
+                <section class="px-6 lg:px-40 py-20 bg-slate-50 dark:bg-[#0a110a]" id="contact">
+                    <div class="max-w-[1200px] mx-auto">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                            <!-- Contact Info & Map -->
+                            <div class="flex flex-col gap-10">
+                                <div class="flex flex-col gap-4">
+                                    <h2
+                                        class="text-slate-900 dark:text-white text-3xl font-black uppercase tracking-tight">
+                                        Locate Us</h2>
+                                    <p class="text-slate-600 dark:text-slate-400">Visit our flagship location in the
+                                        heart of Gulshan-e-Iqbal, Karachi. Experience the best equipment and trainers.
+                                    </p>
+                                    <div class="flex flex-col gap-6 mt-4">
+                                        <div class="flex items-start gap-4">
+                                            <div
+                                                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/20 text-primary">
+                                                <span class="material-symbols-outlined">location_on</span>
+                                            </div>
+                                            <div>
+                                                <p
+                                                    class="text-sm font-bold uppercase text-slate-500 dark:text-slate-400">
+                                                    Address</p>
+                                                <p class="text-base font-medium">Gulshan Trade Center, 4th Floor, Block
+                                                    5, Gulshan-e-Iqbal, Karachi</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-start gap-4">
+                                            <div
+                                                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/20 text-primary">
+                                                <span class="material-symbols-outlined">call</span>
+                                            </div>
+                                            <div>
+                                                <p
+                                                    class="text-sm font-bold uppercase text-slate-500 dark:text-slate-400">
+                                                    Phone Number</p>
+                                                <p class="text-base font-medium">03122668129</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="w-full rounded-xl overflow-hidden border border-slate-200 dark:border-[#224922] grayscale hover:grayscale-0 transition-all duration-700">
+                                    <div class="w-full aspect-video bg-cover bg-center"
+                                        data-alt="Dark themed map showing location in Karachi" data-location="Karachi"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBnzMlB6qOV-OrMtJ6jWNCedGDwzDAobgQbdd-a69AdoLCk0Rbc8CIkVjWdTkp6t-LFR1TLzpLlt5xJ1vdRu_7N1zniKbrHXL0cB9OOF6n6YZXQZB3ym-H3URljAPQ4KAR0lgyXX1_SbG5f5lJ06t2cWcvdKgAbjG66pqbTZMyp_rZoyddd3KqHMOujYG1fqtY8JSZYdRlWgeFVVebD_u_mRfny6vJamd7KHgIcfJQ4Ylx8FehvtACE3XzOt6w493QsxwSV6VlOFaA");'>
+                                        <!-- Map Overlay for aesthetics -->
+                                        <div
+                                            class="w-full h-full bg-background-dark/30 flex items-center justify-center">
+                                            <div class="bg-primary p-2 rounded-full shadow-lg">
+                                                <span
+                                                    class="material-symbols-outlined text-background-dark">location_on</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Contact Form -->
+                            <div
+                                class="bg-white dark:bg-[#183418] p-8 md:p-10 rounded-2xl shadow-2xl shadow-black/10 dark:shadow-none border border-slate-100 dark:border-[#316831]">
+                                <h3 class="text-2xl font-black mb-8 uppercase tracking-tight">Drop a Message</h3>
+                                <form class="flex flex-col gap-6">
+                                    <div class="flex flex-col gap-2">
+                                        <label
+                                            class="text-xs font-bold uppercase text-slate-500 dark:text-slate-400 tracking-wider">Full
+                                            Name</label>
+                                        <input
+                                            class="w-full bg-slate-50 dark:bg-[#102210] border-slate-200 dark:border-[#224922] rounded-lg h-12 px-4 focus:ring-primary focus:border-primary text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-600 outline-none"
+                                            placeholder="John Doe" type="text" />
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <label
+                                            class="text-xs font-bold uppercase text-slate-500 dark:text-slate-400 tracking-wider">Phone
+                                            Number</label>
+                                        <input
+                                            class="w-full bg-slate-50 dark:bg-[#102210] border-slate-200 dark:border-[#224922] rounded-lg h-12 px-4 focus:ring-primary focus:border-primary text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-600 outline-none"
+                                            placeholder="03XX XXXXXXX" type="tel" />
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <label
+                                            class="text-xs font-bold uppercase text-slate-500 dark:text-slate-400 tracking-wider">Select
+                                            Plan</label>
+                                        <select
+                                            class="w-full bg-slate-50 dark:bg-[#102210] border-slate-200 dark:border-[#224922] rounded-lg h-12 px-4 focus:ring-primary focus:border-primary text-slate-900 dark:text-white outline-none">
+                                            <option>Essential</option>
+                                            <option>Pro</option>
+                                            <option selected="">Elite</option>
+                                        </select>
+                                    </div>
+                                    <div class="flex flex-col gap-2">
+                                        <label
+                                            class="text-xs font-bold uppercase text-slate-500 dark:text-slate-400 tracking-wider">Message</label>
+                                        <textarea
+                                            class="w-full bg-slate-50 dark:bg-[#102210] border-slate-200 dark:border-[#224922] rounded-lg p-4 focus:ring-primary focus:border-primary text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-600 outline-none resize-none"
+                                            placeholder="Tell us about your fitness goals..." rows="4"></textarea>
+                                    </div>
+                                    <button
+                                        class="w-full bg-primary text-background-dark font-black py-4 rounded-lg uppercase tracking-widest hover:brightness-110 transition-all shadow-lg shadow-primary/20 mt-2"
+                                        type="submit">
+                                        Send Message
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <!-- Footer -->
+            <footer
+                class="bg-white dark:bg-background-dark border-t border-slate-200 dark:border-[#224922] py-10 px-6 lg:px-40">
+                <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div class="flex items-center gap-3">
+                        <div class="size-6 text-primary">
+                            <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <span class="font-bold uppercase tracking-tighter">Emergym Karachi</span>
+                    </div>
+                    <div class="flex flex-col md:flex-row items-center gap-4">
+                        <p class="text-sm text-slate-500 dark:text-slate-400">© 2024 Emergym. All rights reserved.</p>
+                        <div class="flex gap-4 text-sm text-slate-500">
+                            <a class="hover:text-primary" href="privacy.html">Privacy</a>
+                            <a class="hover:text-primary" href="terms.html">Terms</a>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <a class="text-slate-500 hover:text-primary transition-colors" href="#"><span
+                                class="material-symbols-outlined">public</span></a>
+                        <a class="text-slate-500 hover:text-primary transition-colors" href="#"><span
+                                class="material-symbols-outlined">alternate_email</span></a>
+                        <a class="text-slate-500 hover:text-primary transition-colors" href="#"><span
+                                class="material-symbols-outlined">fitness_center</span></a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
