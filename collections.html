@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ZEÉBAY Collection - Antique Rings</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c5a249",
+                        "background-light": "#fcfbf7",
+                        "background-dark": "#1e1b14",
+                        "emerald-luxury": "#006400",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .gold-foil-text {
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 0 0 1px #c5a249;
+        }
+
+        body {
+            min-height: max(884px, 100dvh);
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display">
+    <!-- TopAppBar -->
+    <nav
+        class="sticky top-0 z-50 flex items-center bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md p-4 pb-2 justify-between border-b border-primary/10">
+        <a href="index.html" class="text-primary flex size-12 shrink-0 items-center">
+            <span class="material-symbols-outlined text-[28px]">arrow_back_ios</span>
+        </a>
+        <h1 class="gold-foil-text text-2xl font-bold tracking-[0.2em] flex-1 text-center pl-2">ZEÉBAY</h1>
+        <div class="flex w-12 items-center justify-end">
+            <a href="cart.html" class="flex items-center justify-center rounded-full h-12 bg-transparent text-primary">
+                <span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+            </a>
+        </div>
+    </nav>
+    <!-- Page Content Container -->
+    <main class="max-w-md mx-auto mb-20">
+        <!-- HeadlineText -->
+        <div class="px-4 pt-8 pb-2">
+            <h2 class="text-primary/80 uppercase tracking-widest text-[11px] font-bold mb-1">Fine Jewelry</h2>
+            <h1 class="text-[#191610] dark:text-white tracking-tight text-[32px] font-bold leading-tight">The Antique
+                Ring Collection</h1>
+        </div>
+        <!-- Chips / Filter Bar -->
+        <div class="flex gap-2 p-4 overflow-x-auto no-scrollbar scroll-smooth">
+            <button
+                class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary/10 dark:bg-primary/20 border border-primary/20 px-4">
+                <span class="material-symbols-outlined text-primary text-[18px]">tune</span>
+                <p class="text-[#191610] dark:text-white text-sm font-medium">Filter</p>
+            </button>
+            <button
+                class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-background-dark border border-primary/10 px-4">
+                <p class="text-[#191610] dark:text-white text-sm font-medium">Sort By</p>
+                <span class="material-symbols-outlined text-[#191610] dark:text-white text-[18px]">expand_more</span>
+            </button>
+            <button
+                class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-background-dark border border-primary/10 px-4">
+                <p class="text-[#191610] dark:text-white text-sm font-medium">Era</p>
+                <span class="material-symbols-outlined text-[#191610] dark:text-white text-[18px]">expand_more</span>
+            </button>
+            <button
+                class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-white dark:bg-background-dark border border-primary/10 px-4">
+                <p class="text-[#191610] dark:text-white text-sm font-medium">Price</p>
+                <span class="material-symbols-outlined text-[#191610] dark:text-white text-[18px]">expand_more</span>
+            </button>
+        </div>
+        <!-- ImageGrid / Product Grid -->
+        <div class="grid grid-cols-2 gap-4 p-4">
+            <!-- Product 1 -->
+            <a href="product.html"
+                class="product-card flex flex-col gap-3 pb-6 transition-all duration-300 rounded block">
+                <div class="relative group">
+                    <div class="w-full aspect-[4/5] bg-center bg-no-repeat bg-cover rounded-lg shadow-sm"
+                        data-alt="Close up of a Victorian Emerald Halo ring on white satin"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCEEyZ--9ZGE8SARyryz-5Ej__YXYREUCsO6ynK2rPhwlNPkq7kuj36epeSIm7gGbA6hc7eqyOvFjPECntxmXIriFt5rAjvy4CaXWPvG6HPrEdmp36c5EUNGSXtt73BDWWycgg_J5abayZF2c8RZ5U_s6CQU7DoRwSyUFzhqDRMnFOkRIl_W-nedSdYAyX5skiXf8YwrEwy_FFUXX2xnsYBQNkeYyHKe4bo2LOn3smOP2nMhKmIH-BQIXx7jlnXWwe-vPqvI0rmLKA-");'>
+                    </div>
+                    <button
+                        class="absolute bottom-3 right-3 flex size-10 items-center justify-center rounded-full bg-primary text-white shadow-lg">
+                        <span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+                    </button>
+                </div>
+                <div class="px-1">
+                    <p class="text-[#191610] dark:text-white text-base font-semibold leading-tight">Victorian Emerald
+                        Halo</p>
+                    <p class="text-emerald-luxury dark:text-emerald-400 text-[15px] font-bold mt-1">$4,200</p>
+                    <p class="text-primary text-[12px] font-medium tracking-wide uppercase mt-2">Quick Add</p>
+                </div>
+            </a>
+            <!-- Product 2 -->
+            <a href="product.html"
+                class="product-card flex flex-col gap-3 pb-6 transition-all duration-300 rounded block">
+                <div class="relative group">
+                    <div class="w-full aspect-[4/5] bg-center bg-no-repeat bg-cover rounded-lg shadow-sm"
+                        data-alt="Georgian 18k gold band with intricate carvings"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAbKEGgkdstb8TZ0BuMy3fEWRoD8mQwScpejz41saHH4_yvnq7Mj-Ks50vQrMIP2VuCbzpSQ7IFFPq-UdJP6xfdEMR86gtJRfn3Bb5MyG9A3qTrLxrHG1R4nMtmedp2xtbVQ_26lxdcKijq7sk6u8KbnsBGvOOm4VLTFUjTrsdDfZ2-Lr5LdQ5-iDT1406jRDhvAeOspAp6bT24WWUgRkhjHDmvHJZsOhnIEw3TEbTB2kvWjrcazHSsyJ3JZo0CxQjc5lff28hEEWZl");'>
+                    </div>
+                    <button
+                        class="absolute bottom-3 right-3 flex size-10 items-center justify-center rounded-full bg-primary text-white shadow-lg">
+                        <span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+                    </button>
+                </div>
+                <div class="px-1">
+                    <p class="text-[#191610] dark:text-white text-base font-semibold leading-tight">Georgian Gold Band
+                    </p>
+                    <p class="text-emerald-luxury dark:text-emerald-400 text-[15px] font-bold mt-1">$2,850</p>
+                    <p class="text-primary text-[12px] font-medium tracking-wide uppercase mt-2">Quick Add</p>
+                </div>
+            </a>
+            <!-- Product 3 -->
+            <a href="product.html"
+                class="product-card flex flex-col gap-3 pb-6 transition-all duration-300 rounded block">
+                <div class="relative group">
+                    <div class="w-full aspect-[4/5] bg-center bg-no-repeat bg-cover rounded-lg shadow-sm"
+                        data-alt="Edwardian diamond solitaire engagement ring"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCXYe5-hM_IHW7l_n3qW1_IRlvfFbUQVVkdkijhBfMV7RfKHWZnqX31hV0fHQ1OnY4MFbm49Rd66jfNhBLS7MsGQGcrAEgscJP8EuoIsOXgcCHk4Ntq3FVmYIQt7O7dCUaUko1h_UV8__jNt0HhLNEEsHlNqkjDfS0UQ1L_CbGLjFgLGcJo-aCRCD6U_ZmqdJEuhe4B81xWA6DY8SxqaICABoTSv39r8nyCoytHE5NVwYlhuWngMMJiDIHjy4Nvvmkbnwv3de6Ys29z");'>
+                    </div>
+                    <button
+                        class="absolute bottom-3 right-3 flex size-10 items-center justify-center rounded-full bg-primary text-white shadow-lg">
+                        <span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+                    </button>
+                </div>
+                <div class="px-1">
+                    <p class="text-[#191610] dark:text-white text-base font-semibold leading-tight">Edwardian Diamond
+                    </p>
+                    <p class="text-emerald-luxury dark:text-emerald-400 text-[15px] font-bold mt-1">$5,100</p>
+                    <p class="text-primary text-[12px] font-medium tracking-wide uppercase mt-2">Quick Add</p>
+                </div>
+            </a>
+            <!-- Product 4 -->
+            <a href="product.html"
+                class="product-card flex flex-col gap-3 pb-6 transition-all duration-300 rounded block">
+                <div class="relative group">
+                    <div class="w-full aspect-[4/5] bg-center bg-no-repeat bg-cover rounded-lg shadow-sm"
+                        data-alt="Art Deco Ruby and Platinum Ring"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5BH2YYdqO-WBU21SGRcrFhpQgjSc9DgBIUcXfqOjG-0IsrA1wivsYcJAxGDtJ8hV-FTAIx5hvIb6zuy3jzyKEDRsj1Mwx55tfv52wfRDkXWwPBBya25RpnwN-Gfgnt3uoS-m-SN7wgXIywqa6wj0Q2JpyhxQioitmoQkzDHDRXdbbH1mUoej7miHk-Na2-yEPlIil90HGJDjJu4Z88fdBvhXPUt6AU-3KwP0XpN9rd-zAlnkrmqPWSOWkcoe2hPha0fuE0EIjGXYh");'>
+                    </div>
+                    <button
+                        class="absolute bottom-3 right-3 flex size-10 items-center justify-center rounded-full bg-primary text-white shadow-lg">
+                        <span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+                    </button>
+                </div>
+                <div class="px-1">
+                    <p class="text-[#191610] dark:text-white text-base font-semibold leading-tight">Art Deco Ruby Ring
+                    </p>
+                    <p class="text-emerald-luxury dark:text-emerald-400 text-[15px] font-bold mt-1">$3,750</p>
+                    <p class="text-primary text-[12px] font-medium tracking-wide uppercase mt-2">Quick Add</p>
+                </div>
+            </a>
+        </div>
+        <!-- SectionHeader / Bottom SEO Content -->
+        <div class="px-4 pt-12 pb-20 border-t border-primary/10 mt-8 bg-white/30 dark:bg-black/10">
+            <h2 class="text-primary tracking-tight text-[24px] font-bold leading-tight pb-4">Curated History: The ZEÉBAY
+                Antique Ring Collection</h2>
+            <div class="space-y-4">
+                <div>
+                    <h3 class="text-[#191610] dark:text-white text-lg font-bold">Craftsmanship from Bygone Eras</h3>
+                    <p class="text-[#5c564a] dark:text-gray-400 text-sm leading-relaxed font-sans">
+                        Discover a world where jewelry was not just an accessory, but a testament to artisanal mastery.
+                        Our collection spans from the romantic Victorian era to the bold geometries of Art Deco. Each
+                        piece is hand-selected for its provenance, quality, and timeless beauty.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-[#191610] dark:text-white text-lg font-bold">Authenticity Guaranteed</h3>
+                    <p class="text-[#5c564a] dark:text-gray-400 text-sm leading-relaxed font-sans">
+                        Every ring in the ZEÉBAY collection undergoes a rigorous authentication process by our master
+                        gemologists. We specialize in finding rare specimens that maintain their original luster while
+                        whispering stories of centuries past.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Logo -->
+        <div class="flex flex-col items-center py-10 opacity-30">
+            <h2 class="gold-foil-text text-xl font-bold tracking-[0.3em] mb-2">ZEÉBAY</h2>
+            <p class="text-[#191610] dark:text-white text-[10px] uppercase font-sans tracking-widest">London • Paris •
+                New York</p>
+        </div>
+    </main>
+    <!-- Bottom Navigation Bar (iOS Style) -->
+    <div
+        class="fixed bottom-0 w-full bg-background-light/95 dark:bg-background-dark/95 border-t border-primary/10 backdrop-blur-md px-6 py-3 flex justify-between items-center z-50">
+        <a href="index.html" class="flex flex-col items-center text-primary">
+            <span class="material-symbols-outlined">home</span>
+            <span class="text-[10px] uppercase font-sans font-bold mt-1">Shop</span>
+        </a>
+        <a href="shop.html" class="flex flex-col items-center text-[#191610] dark:text-gray-400">
+            <span class="material-symbols-outlined">search</span>
+            <span class="text-[10px] uppercase font-sans font-bold mt-1">Explore</span>
+        </a>
+        <a href="wishlist.html" class="flex flex-col items-center text-[#191610] dark:text-gray-400">
+            <span class="material-symbols-outlined">favorite</span>
+            <span class="text-[10px] uppercase font-sans font-bold mt-1">Wishlist</span>
+        </a>
+        <a href="profile.html" class="flex flex-col items-center text-[#191610] dark:text-gray-400">
+            <span class="material-symbols-outlined">person</span>
+            <span class="text-[10px] uppercase font-sans font-bold mt-1">Account</span>
+        </a>
+    </div>
+</body>
+
+</html>

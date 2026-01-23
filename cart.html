@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ZEÉBAY Cart</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c5a249",
+                        "background-light": "#fcfbf7",
+                        "background-dark": "#1e1b14",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .gold-foil-text {
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        body {
+            font-family: 'Noto Serif', serif;
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display">
+    <nav
+        class="sticky top-0 z-50 flex items-center bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md p-4 pb-2 justify-between border-b border-primary/10">
+        <a href="index.html" class="text-primary flex size-12 shrink-0 items-center">
+            <span class="material-symbols-outlined text-[28px]">arrow_back_ios</span>
+        </a>
+        <h1 class="gold-foil-text text-2xl font-bold tracking-[0.2em] flex-1 text-center pl-2">ZEÉBAY</h1>
+        <div class="flex w-12 items-center justify-end">
+            <!-- Empty for balance -->
+        </div>
+    </nav>
+    <main class="max-w-md mx-auto min-h-screen flex flex-col items-center justify-center p-8 text-center">
+        <span class="material-symbols-outlined text-primary text-6xl mb-4">shopping_bag</span>
+        <h1 class="text-2xl font-bold text-primary mb-2">Your Bag is Empty</h1>
+        <p class="text-gray-500 mb-8">Find something timeless to add to your collection.</p>
+        <a href="index.html"
+            class="bg-primary text-white px-8 py-3 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-primary/90 transition-colors">
+            Start Shopping
+        </a>
+    </main>
+</body>
+
+</html>

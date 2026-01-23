@@ -1,257 +1,210 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en">
-
+<html class="light" lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Emergym | Karachi's Premium Fitness Experience</title>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>ZEÉBAY Home Screen</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;family=Noto+Sans:wght@100..900&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
     <script id="tailwind-config">
         tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#0df20d",
-                        "background-light": "#f5f8f5",
-                        "background-dark": "#0a0a0a", // Deep charcoal/black
-                    },
-                    fontFamily: {
-                        "display": ["Lexend", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                },
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#c5a249",
+                "charcoal": "#121212",
+                "ivory": "#f8f7f6",
+                "background-light": "#f8f7f6",
+                "background-dark": "#1e1b14",
+              },
+              fontFamily: {
+                "display": ["Noto Serif", "serif"],
+                "sans": ["Noto Sans", "sans-serif"]
+              },
+              borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
             },
+          },
         }
     </script>
     <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
         body {
-            font-family: 'Lexend', sans-serif;
+            font-family: 'Noto Serif', serif;
+            min-height: max(884px, 100dvh);
         }
-
-        .hero-video-overlay {
-            background: linear-gradient(to bottom, rgba(10, 10, 10, 0.6) 0%, rgba(10, 10, 10, 0.4) 50%, rgba(10, 10, 10, 1) 100%);
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
         }
-
-        .nav-blur {
-            backdrop-filter: blur(12px);
-            background-color: rgba(10, 10, 10, 0.7);
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
     </style>
 </head>
-
-<body class="bg-background-light dark:bg-background-dark text-white font-display overflow-x-hidden">
-    <!-- Sticky Navigation Bar -->
-    <header class="sticky top-0 left-0 right-0 z-50 bg-black border-b border-white/10">
-        <div class="max-w-[1440px] mx-auto px-6 lg:px-20 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary text-3xl">fitness_center</span>
-                <h2 class="text-2xl font-black tracking-tighter italic">EMERGYM</h2>
-            </div>
-
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex items-center gap-10">
-                <a class="text-sm font-bold uppercase tracking-widest text-primary" href="index.html">Home</a>
-                <a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
-                    href="programs.html">Programs</a>
-                <a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
-                    href="membership.html">Membership</a>
-                <a class="text-sm font-bold uppercase tracking-widest hover:text-primary transition-colors"
-                    href="about.html">About Us</a>
-            </nav>
-
-            <div class="flex items-center gap-6">
-                <button onclick="window.location.href='membership.html'"
-                    class="hidden sm:block px-6 py-2 bg-primary text-background-dark font-black uppercase text-sm rounded-lg hover:shadow-[0_0_20px_rgba(13,242,13,0.5)] transition-all">
-                    Join Now
-                </button>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
-                    <span class="material-symbols-outlined text-3xl">menu</span>
-                </button>
-            </div>
+<body class="bg-background-light dark:bg-background-dark text-charcoal dark:text-ivory selection:bg-primary/30">
+    <!-- Announcement Bar -->
+    <div class="bg-charcoal dark:bg-black py-2 px-4 sticky top-0 z-50">
+        <p class="text-primary text-[10px] uppercase tracking-[0.2em] font-bold text-center">
+            Free Insured Global Shipping on All Orders
+        </p>
+    </div>
+    <!-- Sticky Header -->
+    <header class="flex items-center bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md p-4 justify-between sticky top-[32px] z-40 border-b border-primary/10">
+        <div class="text-charcoal dark:text-ivory flex size-10 items-center justify-start cursor-pointer">
+            <span class="material-symbols-outlined">menu</span>
         </div>
-
-        <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu"
-            class="fixed inset-0 z-[60] bg-black transform translate-x-full transition-transform duration-300 flex flex-col items-center justify-center gap-8">
-            <button id="close-menu-btn" class="absolute top-6 right-6 text-primary hover:text-white transition-colors">
-                <span class="material-symbols-outlined text-4xl">close</span>
-            </button>
-
-            <a href="index.html" class="text-3xl font-black italic uppercase tracking-tighter text-primary">Home</a>
-            <a href="programs.html"
-                class="text-3xl font-black italic uppercase tracking-tighter text-white hover:text-primary transition-colors">Programs</a>
-            <a href="membership.html"
-                class="text-3xl font-black italic uppercase tracking-tighter text-white hover:text-primary transition-colors">Membership</a>
-            <a href="about.html"
-                class="text-3xl font-black italic uppercase tracking-tighter text-white hover:text-primary transition-colors">About
-                Us</a>
-
-            <button onclick="window.location.href='membership.html'"
-                class="mt-8 px-10 py-4 bg-primary text-background-dark font-black uppercase tracking-widest rounded-lg hover:scale-105 transition-transform">
-                Join Now
-            </button>
+        <!-- FIXED: Logo changed to text-primary (Golden) -->
+        <h2 class="text-primary text-2xl font-bold leading-tight tracking-[-0.015em] flex-1 text-center font-display italic">
+            ZEÉBAY
+        </h2>
+        <div class="flex size-10 items-center justify-end gap-3">
+            <a href="shop.html" class="flex items-center justify-center text-charcoal dark:text-ivory">
+                <span class="material-symbols-outlined">search</span>
+            </a>
+            <a href="cart.html" class="flex items-center justify-center text-charcoal dark:text-ivory">
+                <span class="material-symbols-outlined">shopping_bag</span>
+            </a>
         </div>
     </header>
     <!-- Hero Section -->
-    <section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
-        <!-- Background Video/Image Container -->
-        <div class="absolute inset-0 z-0">
-            <!-- Simulated Video Background using high-quality athletic image -->
-            <div class="w-full h-full bg-cover bg-center"
-                data-alt="Intense workout session in a dark gym with dramatic lighting"
-                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDqc8rTusyjbqL5jeAYihRuRrm8tUvLNPfFtCyTxkcJFDwnPzDiVyWyEf5aIhEM3ZrCkw-8AwGv1onZrx-iynTUqtqgWLAaM5Eo8da5qPm8D1fBR_nfPC1DwcP7dX8NgsZ2Xad8DKbKhK_s-zjpKA6EPpcOiCFWxqrCxe9Is_EvQobGSmXpwQpFxqcS2sC6A2buVhQCkMpBV6wIEGSaQa5wbuuMpcQ0RmEzhAYG31R6_P-E3fTRnJxeQ0fMLTUESpp4xtIV1sjy4Gg");'>
-            </div>
-            <div class="absolute inset-0 hero-video-overlay"></div>
-        </div>
-        <!-- Hero Content -->
-        <div class="relative z-10 container mx-auto px-6 text-center">
-            <div class="inline-block mb-6 px-4 py-1 border border-primary/50 bg-primary/10 rounded-full">
-                <p class="text-primary text-xs md:text-sm font-bold tracking-[0.2em] uppercase">Now Open in Karachi</p>
-            </div>
-            <h1 class="text-5xl md:text-8xl font-black mb-6 tracking-tighter leading-none italic uppercase">
-                Unleash Your <br />
-                <span class="text-primary drop-shadow-[0_0_15px_rgba(13,242,13,0.4)]">Inner Strength</span>
-            </h1>
-            <p class="max-w-2xl mx-auto text-gray-300 text-lg md:text-xl mb-10 font-light">
-                Experience Karachi's most exclusive premium facility. Elite coaching, state-of-the-art equipment, and a
-                community of high-performers.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button onclick="window.location.href='membership.html'"
-                    class="w-full sm:w-auto min-w-[220px] h-14 bg-primary text-background-dark font-black text-lg uppercase tracking-widest rounded-lg hover:scale-105 transition-transform hover:shadow-[0_0_30px_rgba(13,242,13,0.6)]">
-                    Join Now
-                </button>
-                <button onclick="window.location.href='programs.html'"
-                    class="w-full sm:w-auto min-w-[220px] h-14 bg-transparent border-2 border-white text-white font-black text-lg uppercase tracking-widest rounded-lg hover:bg-white hover:text-background-dark transition-all">
-                    Start Transformation
-                </button>
-            </div>
-        </div>
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
-            <span class="text-primary/60 text-[10px] uppercase tracking-[0.3em] font-bold">Scroll to Explore</span>
-            <div class="w-[2px] h-12 bg-gradient-to-b from-primary to-transparent"></div>
-        </div>
-    </section>
-    <!-- Why Emergym / Features -->
-    <section class="py-24 bg-background-dark relative">
-        <div class="max-w-[1200px] mx-auto px-6">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-                <div class="max-w-xl">
-                    <h2 class="text-4xl md:text-5xl font-black uppercase italic mb-4">Why <span
-                            class="text-primary">Emergym?</span></h2>
-                    <p class="text-gray-400 text-lg">We don't just provide a space; we provide the atmosphere, the
-                        tools, and the expertise to redefine your limits.</p>
-                </div>
-                <div class="hidden md:block">
-                    <div
-                        class="flex items-center gap-2 text-primary border border-primary/20 bg-primary/5 px-4 py-2 rounded-lg">
-                        <span class="material-symbols-outlined">location_on</span>
-                        <span class="font-bold uppercase text-xs tracking-widest" data-location="Karachi">Karachi,
-                            Pakistan</span>
+    <main>
+        <section class="@container">
+            <div class="p-0">
+                <div class="flex min-h-[560px] flex-col gap-6 bg-cover bg-center bg-no-repeat items-center justify-center p-6 text-center" data-alt="Cinematic close-up of a royal diamond necklace on a velvet bust" style='background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBPrM8NbaJrKoCDWKorRTIgjiHcYO3yygflf2oH1Dc2diFjJcQ3qd40_TeQh5RCLZNKJRiRfMLR8asnUgLAoAXWEKWZ9B7u4KK1EeXBRu_Mt4KP0Nocv_znSL1_hZtGwvqn4qJg0xdghH-2uvpKjtVjy69WeIA6DzNkIMyeRW4HNCKKwNoXjBtjbJ99YtS47iBJ2V1PVfaJYInu1oQjHbivi8OtbchzWkOrQfxsuZvcW0gWnhDo5skAO4pWmyMkusroNfYhyfbWY_My");'>
+                    <div class="flex flex-col gap-3">
+                        <h1 class="text-white text-4xl font-bold leading-tight tracking-tight @[480px]:text-6xl font-display">
+                            Where Heritage Meets <br/>Modern Luxury
+                        </h1>
+                        <p class="text-white/90 text-sm font-normal leading-normal @[480px]:text-lg max-w-md mx-auto">
+                            Experience the royalty of antique jewelry meticulously preserved for the modern connoisseur.
+                        </p>
                     </div>
+                    <a href="collections.html" class="mt-4 flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-8 bg-primary text-charcoal text-base font-bold leading-normal tracking-wide shadow-lg hover:scale-105 transition-transform">
+                        <span class="truncate">Explore Collection</span>
+                    </a>
                 </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Card 1 -->
-                <div
-                    class="group p-8 rounded-xl border border-white/5 bg-[#121212] hover:border-primary/50 transition-all duration-300">
-                    <div
-                        class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-background-dark transition-colors">
-                        <span class="material-symbols-outlined text-3xl">groups</span>
-                    </div>
-                    <h3 class="text-xl font-bold uppercase mb-3">Elite Trainers</h3>
-                    <p class="text-gray-400 leading-relaxed">Our internationally certified coaches specialize in
-                        athletic performance, bodybuilding, and functional health.</p>
-                </div>
-                <!-- Card 2 -->
-                <div
-                    class="group p-8 rounded-xl border border-white/5 bg-[#121212] hover:border-primary/50 transition-all duration-300">
-                    <div
-                        class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-background-dark transition-colors">
-                        <span class="material-symbols-outlined text-3xl">fitness_center</span>
-                    </div>
-                    <h3 class="text-xl font-bold uppercase mb-3">Modern Equipment</h3>
-                    <p class="text-gray-400 leading-relaxed">Equipped with the latest Hammer Strength and Life Fitness
-                        machines for unparalleled workout precision.</p>
-                </div>
-                <!-- Card 3 -->
-                <div
-                    class="group p-8 rounded-xl border border-white/5 bg-[#121212] hover:border-primary/50 transition-all duration-300">
-                    <div
-                        class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-background-dark transition-colors">
-                        <span class="material-symbols-outlined text-3xl">schedule</span>
-                    </div>
-                    <h3 class="text-xl font-bold uppercase mb-3">24/7 Access</h3>
-                    <p class="text-gray-400 leading-relaxed">Your goals don't sleep. Train whenever you want with full
-                        secure biometric access at any hour.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer class="bg-black border-t border-white/5 py-12">
-        <div class="max-w-[1200px] mx-auto px-6 flex flex-col items-center gap-10">
-            <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary text-2xl">fitness_center</span>
-                <h2 class="text-xl font-black italic">EMERGYM</h2>
-            </div>
-            <div class="flex flex-wrap justify-center gap-8 md:gap-16">
-                <a class="text-gray-500 hover:text-primary text-sm uppercase font-bold tracking-widest transition-colors"
-                    href="privacy.html">Privacy Policy</a>
-                <a class="text-gray-500 hover:text-primary text-sm uppercase font-bold tracking-widest transition-colors"
-                    href="terms.html">Terms of Service</a>
-                <a class="text-gray-500 hover:text-primary text-sm uppercase font-bold tracking-widest transition-colors"
-                    href="membership.html#contact">Contact Us</a>
-            </div>
-            <div class="flex items-center gap-6">
-                <a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-500 hover:text-primary hover:border-primary transition-all"
-                    href="#">
-                    <span class="material-symbols-outlined">camera</span>
+        </section>
+        <!-- Featured Collections Grid -->
+        <section class="py-8">
+            <h2 class="text-charcoal dark:text-white text-2xl font-bold px-4 pb-6 font-display">Featured Collections</h2>
+            <div class="grid grid-cols-2 gap-3 px-4">
+                <a href="collections.html" class="group relative overflow-hidden rounded-xl aspect-[3/4] flex flex-col justify-end p-4 transition-all" data-alt="Intricate Victorian gold earrings with emeralds" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 50%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuADpAAhSsHv3JInxAp2ZpuHBqHhNfP8GRKtStGsG9Id9HOi3GCil5ItQqoh6BDDm_zLuvW0hwRic5LrKxx63O4MRugFrsvyzZzpdikhZdQFs9w_ylX-7P6qk2OnnOrUEjW-gG5qiKpFq4nLQnkvblpZ-O8A8jM-XqXf1kaXwo2zsCKOVsaByZEEDvnT-lKZuTQsTgKBYyce6KJ1z-6Usb6A5_tmRjdemoKV7YmotL7LNmktAtAwrC8hxDj5nidKgP8lOAw50jp3FcD1"); background-size: cover; background-position: center;'>
+                    <p class="text-white text-lg font-bold leading-tight font-display italic">New Arrivals</p>
+                    <div class="h-0.5 w-0 group-hover:w-12 bg-primary transition-all duration-300"></div>
                 </a>
-                <a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-500 hover:text-primary hover:border-primary transition-all"
-                    href="#">
-                    <span class="material-symbols-outlined">social_leaderboard</span>
-                </a>
-                <a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-500 hover:text-primary hover:border-primary transition-all"
-                    href="#">
-                    <span class="material-symbols-outlined">play_circle</span>
+                <a href="collections.html" class="group relative overflow-hidden rounded-xl aspect-[3/4] flex flex-col justify-end p-4 transition-all" data-alt="Classic antique gold ring with large ruby" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 50%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuB69ofCZs-0_UKMRCBN45QnKZzhYXL_6VtrJ9D73BOVHR9eSSN0zeqz67J6xpuFAf3lrlZMgCuEtPo96VSYc4z-aD0HUETwtAstB13NZYskHEbtgi_-nAYjG7klUwFEldPYQkw5q_peznZhMfemkbUSLDqCKg-bpQGohaE0ZGAzRSx3-9pHx2juUWHlp7NC3J8ZzdZYkhR3nTj0RMWx5xcowCg3EJbA0YjXcCotkzXXMRKvvCJpRFAWt6Cf8gcwnk2DCaXHCaBsMNpB"); background-size: cover; background-position: center;'>
+                    <p class="text-white text-lg font-bold leading-tight font-display italic">Best Sellers</p>
+                    <div class="h-0.5 w-0 group-hover:w-12 bg-primary transition-all duration-300"></div>
                 </a>
             </div>
-            <p class="text-gray-600 text-xs uppercase tracking-widest font-medium">© 2024 Emergym Karachi. Built for
-                Performance.</p>
-        </div>
-    </footer>
-    </footer>
-
-    <script>
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const closeBtn = document.getElementById('close-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        function toggleMenu() {
-            mobileMenu.classList.toggle('translate-x-full');
-            document.body.classList.toggle('overflow-hidden');
-        }
-
-        menuBtn.addEventListener('click', toggleMenu);
-        closeBtn.addEventListener('click', toggleMenu);
-    </script>
+        </section>
+        <!-- Why Choose Us -->
+        <section class="bg-charcoal text-ivory py-12 px-4 mb-8">
+            <div class="flex flex-col gap-8">
+                <div class="text-center">
+                    <h3 class="text-primary text-xs uppercase tracking-[0.3em] font-bold mb-2">The ZEÉBAY Promise</h3>
+                    <h2 class="text-2xl font-display italic">Crafted for Eternity</h2>
+                </div>
+                <div class="grid grid-cols-1 gap-8">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-primary/20 p-3 rounded-full border border-primary/30">
+                            <span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg font-display">Certified Authenticity</h4>
+                            <p class="text-ivory/60 text-sm">Every piece comes with a certificate of heritage and gemstone purity.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="bg-primary/20 p-3 rounded-full border border-primary/30">
+                            <span class="material-symbols-outlined text-primary text-3xl">auto_fix_high</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg font-display">Master Artisans</h4>
+                            <p class="text-ivory/60 text-sm">Hand-restored by specialists in antique jewelry preservation.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="bg-primary/20 p-3 rounded-full border border-primary/30">
+                            <span class="material-symbols-outlined text-primary text-3xl">public</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg font-display">Global Heritage</h4>
+                            <p class="text-ivory/60 text-sm">Insured shipping to collectors across the globe.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Brand Story Section -->
+        <section class="px-4 py-8 mb-12 relative overflow-hidden">
+            <div class="border border-primary/20 rounded-xl p-8 text-center bg-ivory dark:bg-charcoal/50 relative">
+                <div class="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-primary/40 rounded-tl-xl"></div>
+                <div class="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-primary/40 rounded-br-xl"></div>
+                <h2 class="text-2xl font-display italic mb-4 text-charcoal dark:text-white">Our Heritage</h2>
+                <p class="text-charcoal/70 dark:text-ivory/70 text-base leading-relaxed italic font-serif">
+                    "ZEÉBAY was born from a passion for the untold stories of the past. We curate only the finest antique jewelry, ensuring that each piece carries the weight of history and the sparkle of timeless luxury into your modern lifestyle."
+                </p>
+                <div class="mt-6 flex justify-center">
+                    <span class="material-symbols-outlined text-primary">history_edu</span>
+                </div>
+            </div>
+        </section>
+        <!-- Product Showcase (Mini) -->
+        <section class="px-4 pb-20">
+            <div class="flex justify-between items-end mb-6">
+                <h2 class="text-2xl font-bold font-display dark:text-white">New in Store</h2>
+                <a class="text-primary text-sm font-bold underline underline-offset-4" href="shop.html">View All</a>
+            </div>
+            <div class="flex overflow-x-auto gap-4 pb-4 no-scrollbar">
+                <div class="min-w-[200px] flex flex-col gap-2">
+                    <a href="product.html" class="aspect-square rounded-xl bg-charcoal/5 dark:bg-white/5 overflow-hidden" data-alt="Close up of a vintage sapphire brooch">
+                        <img alt="Vintage Sapphire Brooch" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgwI-DWh-JVGSKoH-hehviQwAToBxWsC9K28LotiaY9w-wJcVWcHWTvH9ckQoGqKDs_hriKyzFfljJWNS8i_0vwAgLWoiP3pIARMj5WDEJP1_1OzdabaFVQ_MW2k6bdqEeMqXeUVkf5CnC7RpyIcWfIfuA5ZyANj6IxMeMExckjzhPdfBt88X__JFvDpYnuTf5b0MEJTkubCc_UQt3U70UuSehLrr7ZKqXXbbSB4_4SScZi6OA8TlBRT7FnQtlz1S5_u2MDN2nFaMN"/>
+                    </a>
+                    <p class="text-sm font-bold dark:text-white mt-2">Empire Sapphire Brooch</p>
+                    <p class="text-primary font-bold">$4,250</p>
+                </div>
+                <div class="min-w-[200px] flex flex-col gap-2">
+                    <a href="product.html" class="aspect-square rounded-xl bg-charcoal/5 dark:bg-white/5 overflow-hidden" data-alt="Elegant gold bracelet with intricate filigree">
+                        <img alt="Filigree Gold Bracelet" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9ZHDpdYitdMmQH8GL-9AvTRmZclQMv432-GxlJBctYJu3ifrOPvx6smM-NSgr0b-plgQ2Ws_zLQHVOyEXnrQuXUZ67qorejoKorz55iAps79fYXU0OPqemBw6FG-C24g5ounM10KdgsNCtfBumBGSt1O7xKfrj8QwQsQh45xEHeYWofGzxODB_RfR16JeRQAm-yT4DaFu7EtTghXw8xHxR_XOUL2tHHnepood-9sYUARUusHxQ7rh2L6kESA9mDWCaTJHiuQ24qNq"/>
+                    </a>
+                    <p class="text-sm font-bold dark:text-white mt-2">Filigree Gold Bracelet</p>
+                    <p class="text-primary font-bold">$2,890</p>
+                </div>
+                <div class="min-w-[200px] flex flex-col gap-2">
+                    <a href="product.html" class="aspect-square rounded-xl bg-charcoal/5 dark:bg-white/5 overflow-hidden" data-alt="Pearl drop earrings with small diamonds">
+                        <img alt="Regal Pearl Earrings" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8LUP4UdsrZtnacnclkGxnE4-cIknGIC-FGggVcMo7FUGyD3ZfB005sOOTUTNroTkWw7-KFoTqWjMCmyCjgOHmHpzIJdaE3AZczX_4AogCrXmzflU5cWI6ykffOU9Br_RE-GOUqBwon3cSBDD0aioFhU2tiQzFdbHzJo9TsmKRC0-lYB1QOLJXixdWgeEcZ3T65WASDuAhO4ECWjPhz43Z6G38VEf1iK10bACzEiKn7c0383j9cNUkBhuoiva5vaFZOf95RzilnP49"/>
+                    </a>
+                    <p class="text-sm font-bold dark:text-white mt-2">Regal Pearl Earrings</p>
+                    <p class="text-primary font-bold">$1,500</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer Space -->
+    <div class="h-10"></div>
+    <!-- Floating Navigation Bar (Mobile) -->
+    <nav class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-[400px] bg-charcoal/90 dark:bg-charcoal/95 backdrop-blur-xl h-16 rounded-full border border-primary/20 flex items-center justify-around px-6 z-50 shadow-2xl">
+        <a href="index.html" class="text-primary">
+            <span class="material-symbols-outlined fill-[1]">home</span>
+        </a>
+        <a href="wishlist.html" class="text-ivory/60 hover:text-primary transition-colors">
+            <span class="material-symbols-outlined">favorite</span>
+        </a>
+        <a href="collections.html" class="bg-primary p-2 rounded-full text-charcoal scale-125 -mt-8 shadow-lg border-4 border-background-light dark:border-background-dark flex items-center justify-center">
+            <span class="material-symbols-outlined">diamond</span>
+        </a>
+        <a href="profile.html" class="text-ivory/60 hover:text-primary transition-colors">
+            <span class="material-symbols-outlined">person</span>
+        </a>
+        <a href="support.html" class="text-ivory/60 hover:text-primary transition-colors">
+            <span class="material-symbols-outlined">support_agent</span>
+        </a>
+    </nav>
 </body>
-
 </html>

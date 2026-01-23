@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ZEÉBAY Product View</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Noto+Sans:wght@400;700&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c5a249",
+                        "background-light": "#fbfaf9",
+                        "background-dark": "#1e1b14",
+                        "emerald-price": "#046307",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"],
+                        "sans": ["Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(197, 162, 73, 0.1);
+        }
+
+        .dark .glass-effect {
+            background: rgba(30, 27, 20, 0.6);
+            border: 1px solid rgba(197, 162, 73, 0.2);
+        }
+
+        body {
+            min-height: max(884px, 100dvh);
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-[#191610] dark:text-[#fbfaf9] min-h-screen">
+    <!-- Top Navigation -->
+    <div
+        class="sticky top-0 z-50 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md p-4 pb-2 justify-between">
+        <a href="index.html" class="flex size-12 shrink-0 items-center justify-start cursor-pointer">
+            <span class="material-symbols-outlined text-[#191610] dark:text-[#fbfaf9]">arrow_back_ios</span>
+        </a>
+        <h2 class="text-primary text-xl font-bold leading-tight tracking-[0.1em] flex-1 text-center uppercase">ZEÉBAY
+        </h2>
+        <div class="flex w-12 items-center justify-end">
+            <a href="wishlist.html"
+                class="flex items-center justify-center rounded-full h-10 w-10 bg-transparent text-[#191610] dark:text-[#fbfaf9]">
+                <span class="material-symbols-outlined">favorite</span>
+            </a>
+        </div>
+    </div>
+    <!-- Main Content Scroll Area -->
+    <main class="pb-32">
+        <!-- Hero Gallery -->
+        <div class="@container">
+            <div class="@[480px]:px-4 @[480px]:py-3 relative">
+                <div class="bg-cover bg-center flex flex-col justify-end overflow-hidden bg-gray-200 dark:bg-zinc-800 @[480px]:rounded-xl min-h-[450px]"
+                    data-alt="Victorian emerald ring on a velvet cushion"
+                    style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 40%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAYBCa8s4cn9qPDpBhadLoji6O6ZUz5z0XDS7pftn8xfEDvzvVZuYQWDkweOw62kpBcPvdEdLp4ufw4wbpyyE2xNAO7Bd2SnQ0opM3YDOcK73KMGi6dcMInSzdlMUPBGUPC1fr2_5cVAPwO7-nQS5YRvb6VsvScr1kp1WzZYbZ_vrFNjwXfKKJ4_EungzOsYoD6hJ4p52cQWCrI8ftnU2TC_udEfTPFLbKKQtkVyg0UQzGorfe3NmLLiSPQp7HiT4_sZno9BfJ_VTc4");'>
+                    <div class="flex justify-center gap-2 p-5">
+                        <div class="size-1.5 rounded-full bg-white"></div>
+                        <div class="size-1.5 rounded-full bg-white opacity-50"></div>
+                        <div class="size-1.5 rounded-full bg-white opacity-50"></div>
+                        <div class="size-1.5 rounded-full bg-white opacity-50"></div>
+                    </div>
+                </div>
+                <!-- Floating Interactive Actions -->
+                <div class="absolute bottom-12 right-8 flex flex-col gap-3">
+                    <div
+                        class="glass-effect rounded-full p-3 shadow-lg flex flex-col items-center gap-1 cursor-pointer">
+                        <span class="material-symbols-outlined text-primary" style="font-size: 24px;">360</span>
+                        <p class="text-[10px] font-bold uppercase tracking-wider">360° View</p>
+                    </div>
+                    <div
+                        class="glass-effect rounded-full p-3 shadow-lg flex flex-col items-center gap-1 cursor-pointer">
+                        <span class="material-symbols-outlined text-primary" style="font-size: 24px;">play_circle</span>
+                        <p class="text-[10px] font-bold uppercase tracking-wider">Video</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Product Title and Pricing -->
+        <div class="px-4 pt-8">
+            <div class="flex items-center gap-1 mb-2">
+                <span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+                <span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+                <span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+                <span class="material-symbols-outlined text-primary text-sm fill-current">star</span>
+                <span class="material-symbols-outlined text-primary text-sm">star_half</span>
+                <span class="text-xs text-zinc-500 dark:text-zinc-400 ml-1 font-sans">(48 reviews)</span>
+            </div>
+            <h1 class="text-[#191610] dark:text-[#fbfaf9] tracking-tight text-3xl font-bold leading-tight pb-2">The
+                Victorian Emerald Heirloom</h1>
+            <p class="text-emerald-price dark:text-emerald-500 text-2xl font-bold leading-tight tracking-tight">
+                $4,250.00</p>
+        </div>
+        <!-- Description Section -->
+        <div class="px-4 py-6">
+            <p class="text-zinc-700 dark:text-zinc-300 leading-relaxed text-base italic">
+                A masterpiece of the mid-19th century, this ring features a deep forest emerald surrounded by a halo of
+                rose-cut diamonds set in 18k antique gold. Each facet tells a story of royalty and timeless elegance.
+            </p>
+        </div>
+        <!-- Details Accordion -->
+        <div class="px-4 space-y-2">
+            <div
+                class="border-b border-zinc-200 dark:border-zinc-800 py-4 flex justify-between items-center cursor-pointer">
+                <span class="font-bold text-sm uppercase tracking-widest">Product Specifications</span>
+                <span class="material-symbols-outlined text-zinc-400">expand_more</span>
+            </div>
+            <div
+                class="border-b border-zinc-200 dark:border-zinc-800 py-4 flex justify-between items-center cursor-pointer">
+                <span class="font-bold text-sm uppercase tracking-widest">Care Instructions</span>
+                <span class="material-symbols-outlined text-zinc-400">expand_more</span>
+            </div>
+            <div
+                class="border-b border-zinc-200 dark:border-zinc-800 py-4 flex justify-between items-center cursor-pointer">
+                <span class="font-bold text-sm uppercase tracking-widest">Shipping &amp; Returns</span>
+                <span class="material-symbols-outlined text-zinc-400">expand_more</span>
+            </div>
+        </div>
+        <!-- You May Also Like -->
+        <div class="mt-12">
+            <h3 class="px-4 text-lg font-bold uppercase tracking-widest mb-6 text-center">You May Also Like</h3>
+            <div class="flex overflow-x-auto gap-4 px-4 pb-8 no-scrollbar">
+                <div class="min-w-[160px] flex flex-col gap-3">
+                    <a href="product.html"
+                        class="aspect-square bg-zinc-100 dark:bg-zinc-800 rounded-xl bg-cover bg-center"
+                        data-alt="Antique pearl earrings"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC_2m7njPMeMgoj43VnRPOvTuvnrm0NrvMYAhwfRj-rLgganqlw2RIrPb70gvf-SmIkTy6fBkHyoidRQJ_xUnT8zRfc1ofcPz_Q3WbXND80OTgrUHH732LayIP_dWyTUAGVX7vTcBXPwRTfc8clXW8M2vK4VJAAkPQVdv3Q8m6qgTwOpqbp9yoWfVLGbtefM2SpMst8hAYnz0ReidTLzcQXBv3htBG8SbKeIp1_UBglIy626M24pBr9JY1NGhmGEWjFHuUgS29b0j31");'></a>
+                    <div>
+                        <p class="text-sm font-bold">Royal Pearl Drop</p>
+                        <p class="text-emerald-price text-sm font-bold">$1,850</p>
+                    </div>
+                </div>
+                <div class="min-w-[160px] flex flex-col gap-3">
+                    <a href="product.html"
+                        class="aspect-square bg-zinc-100 dark:bg-zinc-800 rounded-xl bg-cover bg-center"
+                        data-alt="Sapphire necklace"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA7FWyKaZYFmeHkarU1MCTNGnwJJco4FQVzuavWrCuMcCtiX5iDMcebhZQx3OcXmkqKIRAz-BR2gQcEkTUEqnsynAkU5vdF2uRASZp7NNN0_4Eqoz2zkzlwnoIHYd6DOmTrcS5Rry86Sw_Ncg9hf2BIXZcvcp2AOFeZsP9KC0X3Me2neCA4k0LMlNgvZ0Yv3HqCh4Uixv682gYXIsFQFJWgV2m95A6dh92GN_nZnZM63S2rDQGZZdMEIB3p0L0TRbK3ftfN1CZuchVD");'></a>
+                    <div>
+                        <p class="text-sm font-bold">Midnight Sapphire</p>
+                        <p class="text-emerald-price text-sm font-bold">$3,100</p>
+                    </div>
+                </div>
+                <div class="min-w-[160px] flex flex-col gap-3">
+                    <a href="product.html"
+                        class="aspect-square bg-zinc-100 dark:bg-zinc-800 rounded-xl bg-cover bg-center"
+                        data-alt="Gold filigree bracelet"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCmt0DWMSRIX6m6U8AGRj7UZW70j_VsVsFxR2ky8vngejzkPbSJnwtFzNIvitBd4BfGYE9QoRYklYxKQ6_mTyb7S5ZWCfXLfHyQJtyM_0vfC1_RS-MqL6mnV0N3ZeAs1OElwtOs1mv0M-HfGxx-xKrtkZY0jIPRNYuCHvCwGr37KMyXXnFGVGvZ-MGkzaqXEOj5h8DKf5iahy0PQshuHVFzmaK1gpG537uWyyp8cYfpJDPuaKxMsCqIc0wyXt3YmmQkJRexrCBlneJc");'></a>
+                    <div>
+                        <p class="text-sm font-bold">Gilded Filigree</p>
+                        <p class="text-emerald-price text-sm font-bold">$2,400</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Sticky Bottom Bar -->
+    <div
+        class="fixed bottom-0 left-0 right-0 glass-effect border-t border-primary/10 px-6 py-6 pb-8 z-50 rounded-t-[2.5rem] shadow-[0_-10px_40px_rgba(0,0,0,0.05)]">
+        <div class="flex items-center justify-between gap-6 max-w-lg mx-auto">
+            <div class="flex flex-col">
+                <span
+                    class="text-[10px] uppercase tracking-widest text-zinc-500 dark:text-zinc-400 font-sans font-bold">Total
+                    Price</span>
+                <span class="text-emerald-price dark:text-emerald-500 text-xl font-bold leading-none">$4,250.00</span>
+            </div>
+            <a href="cart.html"
+                class="flex-1 bg-primary hover:bg-primary/90 text-white font-bold py-4 px-8 rounded-full shadow-lg shadow-primary/20 flex items-center justify-center gap-2 transition-transform active:scale-95">
+                <span class="material-symbols-outlined">shopping_bag</span>
+                <span class="uppercase tracking-widest text-sm">Add to Cart</span>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
